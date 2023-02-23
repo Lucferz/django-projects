@@ -1,0 +1,5 @@
+#Base de datos SQLite
+db.sqlite3
+
+#Carpeta Cache
+clase1/__pycache__/
