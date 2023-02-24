@@ -20,4 +20,4 @@ reemplazar por el nombre que fuese la carpeta o entorno que se quiere utilizar
         pero no es muy recomendado por la seguridad. Una vez hecho eso volver a ejecutar
     UNIX
         source test/bin/activate
-4-
+4- Luego ya se puede iniciar el proyecto haciendo python  manage.py runserver
