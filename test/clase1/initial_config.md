@@ -20,4 +20,12 @@ reemplazar por el nombre que fuese la carpeta o entorno que se quiere utilizar
         pero no es muy recomendado por la seguridad. Una vez hecho eso volver a ejecutar
     UNIX
         source test/bin/activate
-4- Luego ya se puede iniciar el proyecto haciendo python  manage.py runserver
+
+    Obs: para desactivar entorno virtual en windows es deactivate desde cualquier lado, y
+    en linux es source test/bin/deactivate
+4- ejecutar pip install django y pip install psycopg2 para usar django con postgresql
+5- Si no se tiene instalado postgresql, instalar postgresql en el puerto especificado, con el
+nombre de usuario, host y contraseñas respectivos, ya que hoy por hoy (02/2023) no se hace 
+por variables de ambiente, ver para cambiar eso y crear un archivo .env para esas configuraciones
+6- Correr los migrations pyhton manage.py migrate
+6- Luego ya se puede iniciar el proyecto haciendo python  manage.py runserver
