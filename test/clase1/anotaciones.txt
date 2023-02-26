@@ -1,0 +1,2 @@
+para crear una pagina en Django, primero debemos de crear el modulo al que pertenece con el comando:
+    pyhton manage.py startapp {nombre}

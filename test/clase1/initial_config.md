@@ -21,11 +21,12 @@ reemplazar por el nombre que fuese la carpeta o entorno que se quiere utilizar
     UNIX
         source test/bin/activate
 
-    Obs: para desactivar entorno virtual en windows es deactivate desde cualquier lado, y
-    en linux es source test/bin/deactivate
+    Obs: para desactivar entorno virtual en se ejecuta deactivate desde cualquier lado
+         Siempre que se vaya a trabajar en el proyecto se tiene que estar dentro del entorno virtual
 4- ejecutar pip install django y pip install psycopg2 para usar django con postgresql
 5- Si no se tiene instalado postgresql, instalar postgresql en el puerto especificado, con el
 nombre de usuario, host y contraseñas respectivos, ya que hoy por hoy (02/2023) no se hace 
 por variables de ambiente, ver para cambiar eso y crear un archivo .env para esas configuraciones
 6- Correr los migrations pyhton manage.py migrate
-6- Luego ya se puede iniciar el proyecto haciendo python  manage.py runserver
+7- Crear super usuario python manage.py createsuperuser
+8- Luego ya se puede iniciar el proyecto haciendo python  manage.py runserver
