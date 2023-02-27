@@ -1,3 +1,5 @@
+-Crear nuevo proyecto Django, python bin/django-admin startproject nombre_proyecto (dentro del entorno virtual)
+
 - para crear una pagina en Django, primero debemos de crear el modulo al que pertenece con el comando:
     pyhton manage.py startapp {nombre}
 luego tenemos que agregarla en settings.py en el apartado de installed apps, se le coloca el nombre
@@ -8,3 +10,10 @@ nombre de la tabla de base de datos y sus campos respectivos. Luego ejecutamos e
     python manage.py makemigrations
 Y por ultimo ejecutamos la migracion
     python manage.py migrate
+
+- Para crear vistas personalizadas, crear una carpeta templates en la raiz, y seguir las indicaciones, 
+empezando por ver views.py
+Para configurar la carpeta template, ir a settings.py, buscar el apartado TEMPLATES, y en DIR, colocamos
+el path a la carpeta templates
+
+-leer una base de datos existente y colocar en los models.py, python manage.py inspectdb > app/models.py

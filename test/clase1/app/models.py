@@ -7,26 +7,26 @@ class Estados(models.Model):
     es_desc =models.CharField(max_length=80,null=False,blank=False)
     es_cod = models.IntegerField(null=False, blank=False)
     def __str__(self) -> str:
-        return super().__str__()
+        return self.es_desc
         
 class Personas(models.Model):
     per_id = models.AutoField(primary_key=True)
     estado_id = models.ForeignKey(Estados, on_delete=models.RESTRICT)
     per_nombre = models.CharField(max_length=100, null=False, blank=False)
     per_apellido = models.CharField(max_length=100, null=False, blank=False)
-    per_cedula = models.CharField(max_length=10, null=True)
-    per_telefono = models.CharField(max_length=50, null=True)
-    per_email = models.EmailField(null=True)
+    per_cedula = models.CharField(max_length=10, null=True, blank=True)
+    per_telefono = models.CharField(max_length=50, null=True, blank=True)
+    per_email = models.EmailField(null=True, blank=True)
     fecha_alta = models.DateField(auto_now_add=True)
     usuario_alta = models.IntegerField(null=False)
     fecha_mod = models.DateField(auto_now=True)
-    usuario_mod= models.IntegerField(null=True)
+    usuario_mod= models.IntegerField(null=True, blank=True)
     def __str__(self) -> str:
         return super().__str__()
 
 class TipoCliente(models.Model):
     tc_id = models.AutoField(primary_key=True)
-    tc_desc = models.CharField(max_length=70, null=True, blank=True)
+    tc_desc = models.CharField(max_length=70, null=False, blank=False)
     def __str__(self) -> str:
         return super().__str__()
 
@@ -35,12 +35,12 @@ class Clientes(models.Model):
     persona_id = models.ForeignKey(Personas, on_delete=models.RESTRICT)
     tipo_cliente_id = models.ForeignKey(TipoCliente, on_delete=models.RESTRICT)
     estado_id = models.ForeignKey(Estados, on_delete=models.RESTRICT)
-    cli_razon_social = models.CharField(max_length=100, null=True, blank=False)
-    cli_ruc = models.CharField(max_length=15, null=True, blank=False)
+    cli_razon_social = models.CharField(max_length=100, null=True, blank=True)
+    cli_ruc = models.CharField(max_length=15, null=True, blank=True)
     fecha_alta = models.DateField(auto_now_add=True)
     usuario_alta = models.IntegerField(null=False)
     fecha_mod = models.DateField(auto_now=True)
-    usuario_mod= models.IntegerField(null=True)
+    usuario_mod= models.IntegerField(null=True, blank=True)
     def __str__(self) -> str:
         return super().__str__()
 
@@ -51,7 +51,7 @@ class Prioridades(models.Model):
     fecha_alta = models.DateField(auto_now_add=True)
     usuario_alta = models.IntegerField(null=False)
     fecha_mod = models.DateField(auto_now=True)
-    usuario_mod= models.IntegerField(null=True)
+    usuario_mod= models.IntegerField(null=True, blank=True)
     def __str__(self) -> str:
         return super().__str__()
     
@@ -62,7 +62,7 @@ class Tickets(models.Model):
     fecha_alta = models.DateField(auto_now_add=True)
     usuario_alta = models.IntegerField(null=False)
     fecha_mod = models.DateField(auto_now=True)
-    usuario_mod= models.IntegerField(null=True)
+    usuario_mod= models.IntegerField(null=True, blank=True)
     def __str__(self) -> str:
         return super().__str__()
 
@@ -73,7 +73,7 @@ class Servicios(models.Model):
     fecha_alta = models.DateField(auto_now_add=True)
     usuario_alta = models.IntegerField(null=False)
     fecha_mod = models.DateField(auto_now=True)
-    usuario_mod= models.IntegerField(null=True)
+    usuario_mod= models.IntegerField(null=True, blank=True)
     def __str__(self) -> str:
         return super().__str__()
 
@@ -90,7 +90,7 @@ class Terminales(models.Model):
     fecha_alta = models.DateField(auto_now_add=True)
     usuario_alta = models.IntegerField(null=False)
     fecha_mod = models.DateField(auto_now=True)
-    usuario_mod= models.IntegerField(null=True)
+    usuario_mod= models.IntegerField(null=True, blank=True)
     def __str__(self) -> str:
         return super().__str__()
 
