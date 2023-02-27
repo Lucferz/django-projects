@@ -3,6 +3,7 @@ bin/
 lib/
 include/
 Scripts/
+.idea/
 
 #Archivos
 lib64
