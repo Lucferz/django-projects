@@ -2,4 +2,5 @@
 db.sqlite3
 
 #Carpeta Cache
-clase1/__pycache__/
+*/__pycache__/
+*/*/__pycache__/

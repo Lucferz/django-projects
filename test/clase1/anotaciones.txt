@@ -1,2 +1,10 @@
-para crear una pagina en Django, primero debemos de crear el modulo al que pertenece con el comando:
+- para crear una pagina en Django, primero debemos de crear el modulo al que pertenece con el comando:
     pyhton manage.py startapp {nombre}
+luego tenemos que agregarla en settings.py en el apartado de installed apps, se le coloca el nombre
+de la app que creamos
+
+- para crear una migracion tenemos que crear una clase en models.py del modulo que creamos con el
+nombre de la tabla de base de datos y sus campos respectivos. Luego ejecutamos el comando:
+    python manage.py makemigrations
+Y por ultimo ejecutamos la migracion
+    python manage.py migrate
