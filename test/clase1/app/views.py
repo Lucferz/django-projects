@@ -3,11 +3,12 @@ from . import forms
 from . import models
 
 # Create your views here.
-#Clase render(request: HttpRequest, template_name : str | Sequence[str], context : Mapping[str, Any] | None = ..., using :str | None = ... ) -> HttpResponse
+# Clase render(request: HttpRequest, template_name : str | Sequence[str], context : Mapping[str, Any] | None = ...,
+# using :str | None = ... ) -> HttpResponse
 
-#Al agregar algo aca, tambien se debe agregar en urls.py
+# Al agregar algo aca, tambien se debe agregar en urls.py
 
-#Se crean funciones que devuelven vistas segun peticiones
+# Se crean funciones que devuelven vistas segun peticiones
 
 def Home(request):
     form = forms.PersonasForm(request.POST or None)

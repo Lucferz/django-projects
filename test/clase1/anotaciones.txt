@@ -11,9 +11,38 @@ nombre de la tabla de base de datos y sus campos respectivos. Luego ejecutamos e
 Y por ultimo ejecutamos la migracion
     python manage.py migrate
 
+- Para crear formularios en el admin debemos de cargar el archivo admin.py para crear los formularios
+para el admin
+
+- Opcionalmente se puede crear un archivo llamado X.py, en este ejemplo forms.py (ya que almacenara
+los formularios) para establecer una logica para los formularios personalizados
+
+- Para crear formularios personalizados, podemos crear una logica en views.py, y llamarla en un 
+archivo html como es el ejemplo de home.html y views.py
+
 - Para crear vistas personalizadas, crear una carpeta templates en la raiz, y seguir las indicaciones, 
 empezando por ver views.py
 Para configurar la carpeta template, ir a settings.py, buscar el apartado TEMPLATES, y en DIR, colocamos
 el path a la carpeta templates
 
 -leer una base de datos existente y colocar en los models.py, python manage.py inspectdb > app/models.py
+
+- Colectar archivos estaticos de un servidor externo, aunque ahora lo hicimos en debug=TRUE, o sea development
+https://docs.djangoproject.com/en/4.1/howto/static-files/
+
+- se puede implementar la logica para los static files asi como se hizo en settings.py, urls.py y base.html
+referirse a esos en el mismo orden que fueron nombrados. En estos se define un array con los lugares en donde
+django buscara los archivos estaticos (img, js, css, etc), luego se sigue toda la logica de esa parte para 
+servidores de produccion, y luego en urls.py, hacemos una validacion para saber si estamos en development o 
+en produccion para agg o no los archivos estaticos, y por ultimo en base.html se puede ver como cargar
+esos archivos estaticos
+
+- si se copia el css de bootstrap, quitar las validaciones de integridad y crossorigin si es que no les carga
+los archivos css y js
+
+- En las importaciones se puede ejecutar un tipo de herencia, para implementar codigos dinamicos en una base html,
+para ver ejemplos de esto referirse a base.html especificamente en el bloque de codigo {%block ...%}
+
+- Luego referirse a home.html para ver como implementar la carga dinamica de contenido y la herencia, la herencia
+es extender un archivo y el bloque debe tener la misma etiqueta {% block etiqueta %} para que django sepa que 
+ahi debe de colocar el pedazo de codigo que creamos

@@ -1,7 +1,12 @@
-<h1>{{titulo}}</h1>
+{% extends 'base.html' %}
 
-<form method="post" action="">
-    {% csrf_token %}
-    {{da_form.as_p}}
-    <input type="submit" value="Guardar">
-</form>
+
+{% block form %}
+    <h1>{{titulo}}</h1>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{da_form.as_p}}
+        <input type="submit" value="Guardar">
+    </form>
+{% endblock form %}

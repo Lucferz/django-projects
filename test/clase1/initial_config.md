@@ -29,4 +29,6 @@ nombre de usuario, host y contraseñas respectivos, ya que hoy por hoy (02/2023)
 por variables de ambiente, ver para cambiar eso y crear un archivo .env para esas configuraciones
 6- Correr los migrations pyhton manage.py migrate
 7- Crear super usuario python manage.py createsuperuser
+8- Crear las carpetas al nivel de test/este_nivel, static_env/static_root  y static_env/media_root y ejecutar 
+python manage.py collectstatic
 8- Luego ya se puede iniciar el proyecto haciendo python  manage.py runserver

@@ -4,6 +4,7 @@ lib/
 include/
 Scripts/
 .idea/
+static_env/
 
 #Archivos
 lib64
